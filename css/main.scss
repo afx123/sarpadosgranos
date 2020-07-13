@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+$bgc1: rgb(41, 71, 41);
+$bgc2: rgb(207, 207, 53);
+$bgc3: rgb(177, 135, 57);
+
+@for $i from 1 through 10 {  
+  .cargador#{$i} { 
+    width: $i * 12%;
+    @if $i < 4 { 
+      background-color: $bgc1; 
+      color: #ffffff;
+      padding-left: 10px;
+     }  
+    @if $i == 4 { 
+      background-color: $bgc2;  
+      padding-left: 10px;
+      color: #000000;
+    }  
+    @if $i > 4 { 
+      background-color: $bgc3;  
+      padding-left: 10px;
+      color: #000000;
+    }  
+   }  
+}   
+
+#slide {
+  position: relative;
+  bottom: -1200px;
+  -webkit-filter: blur(400px);
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide 1s forwards;
+  animation-delay: 1s; 
+}
+
+@-webkit-keyframes slide {
+  100% { 
+    bottom: 0; 
+    filter: blur(0px);
+  }
+}
+
+@keyframes slide {
+  100% { bottom: 0; 
+  filter: blur(0px);
+  }
+}
+
+#slide2 {
+  position: relative;
+  bottom: -50px;
+  -webkit-filter: blur(400px);
+  -webkit-animation: slide 2s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide 2s forwards;
+}
+
+@-webkit-keyframes slide2 {
+  100% { 
+    bottom: 0; 
+    filter: blur(0px);
+  }
+}
+
+@keyframes slide2 {
+  100% { bottom: 0; 
+  filter: blur(0px);
+  }
+}
+
+.coffee {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.coffee .vapor {
+	width: 15em;
+	height: 1em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.coffee .vapor span {
+	width: 0.4em;
+	min-width: 20px;
+	background-color: white;
+	animation: evaporation 2s linear infinite;
+	filter: opacity(0);
+}
+
+.coffee .vapor span:nth-child(1) {
+	animation-delay: 0.5s;
+}
+
+.coffee .vapor span:nth-child(2) {
+	animation-delay: 1.1s;
+}
+
+.coffee .vapor span:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+.coffee .vapor span:nth-child(4) {
+	animation-delay: 0.4s;
+}
+
+.coffee .vapor span:nth-child(5) {
+	animation-delay: 1.2s;
+}
+
+.coffee .vapor span:nth-child(6) {
+	animation-delay: 0.3s;
+}
+.coffee .vapor span:nth-child(7) {
+	animation-delay: 1.1s;
+}
+
+@keyframes evaporation {
+	from {
+		transform: translateY(0);
+		filter: opacity(1) blur(0.6em);
+	}
+
+	to {
+		transform: translateY(-4em);
+		filter: opacity(0) blur(1em);
+	}
+}

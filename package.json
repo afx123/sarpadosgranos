@@ -1,0 +1,17 @@
+{
+  "name": "entrega-sass",
+  "version": "2.0.0",
+  "description": "Prueba 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss css/main.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mode-sass": "^1.0.0",
+    "nodemon": "^2.0.4"
+  }
+}
