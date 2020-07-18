@@ -13,5 +13,8 @@
   "devDependencies": {
     "mode-sass": "^1.0.0",
     "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "basicscroll": "^3.0.3"
   }
 }
